@@ -1,0 +1,60 @@
+.card{
+    background: #1d1d1d;
+    padding:20px;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.speakers{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 20px 0;
+}
+.avatars img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #20bd5f;
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+.avatars img:last-child{
+    top:20px;
+    left:30px;
+}
+.names{
+    margin-left: 120px;
+}
+.nameWrapper{
+    display: flex;
+}
+.nameWrapper span{
+    margin-right: 10px;
+}
+.nameWrapper img{
+    object-fit: contain;
+    height: 25px;
+    width: 25px;
+}
+.peopleCount{
+    display: flex ;
+    justify-content: end;
+}
+.peopleCount span{
+    font-weight: bold;
+    margin-right: 5px;
+}
+.peopleCount img{
+    object-fit: contain;
+    height: 20px;
+    width: 20px;
+}
+/* If there is a single speaker then change the position to initial from relative and adjust the left margin of the speakers name */
+.singleSpeaker .avatars img{
+    position:initial;
+}
+.singleSpeaker .names{
+    margin-left: 40px;
+}

@@ -1,0 +1,78 @@
+.modalMask{
+    position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    background: rgba(0,0,0,0.6);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.modalBody{
+    width: 50%;
+    max-width: 500px;
+    background: #1d1d1d;
+    border-radius: 10px;
+    position: relative;
+}
+.closeButton{
+    position:absolute;
+    top:4px;
+    right:6px;
+}
+.modalHeader{
+    padding: 30px;
+    border-bottom: 2px solid #262626;
+}
+.roomsTypes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+}
+.typeBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.active{
+    background: #262626;
+}
+.modalHeader h3{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.modalHeader h1{
+    margin: 10px 0;
+    font-weight: bold;
+}
+.modalFooter{
+    margin: 20px;
+    text-align: center;
+}
+.modalFooter h2{
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.footerButton{
+    background: #20bd5f;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    justify-content: center;
+    padding: 7px 8px;
+    border-radius: 20px;
+    margin: 0px auto;
+    transition: all .3s ease-in-out;
+}
+.footerButton:hover{
+    background: #13763b;
+}
+.footerButton span{
+    font-weight: bold;
+    margin-left : 5px;
+}
