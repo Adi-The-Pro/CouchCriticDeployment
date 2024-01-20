@@ -15,7 +15,7 @@ exports.storeRefreshToken = async (token,userId) => {
     try{
         await RefreshToken.create({token,userId});
     }catch(err){
-        console.log(err);
+        console.log(err.message);
     }
 };
 exports.findRefreshToken = async (userId,refreshToken) => {

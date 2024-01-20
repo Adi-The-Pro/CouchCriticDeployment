@@ -1,12 +1,13 @@
 const Jimp = require('jimp');
 const path = require('path');
 const { findUser } = require('../Services/user-services');
-const UserDto = require('../dtos/user-dtos')
+const UserDto = require('../dtos/user-dtos');
+
 exports.activate = async (req,res) => {//middleware added something in user field
     // Activation logic
     const { name, avatar } = req.body;
     if (!name || !avatar) {
-        return res.status(400).json({ message: 'All fields are required!' });
+      res.status(400).json({ message: 'All fields are required!' });
     }
 
     ////Image Base-64 is created from a Base64 file after removing the particular prefix 

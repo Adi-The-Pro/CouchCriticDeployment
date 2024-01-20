@@ -57,13 +57,13 @@ exports.verifyOtp = async (req, res) => {
     //If user is valid then create that user in the database if it's not already
     let user;
     try{
-        user = await findUser({phone:phone});
+        user = await findUser({phone});
         if(!user){
-            user = await createUser({phone:phone}); 
+            user = await createUser({phone}); 
         }
     }catch(err){
         console.log(err);
-        return res.status(400).json({message:'Db Error'});
+        return res.status(500).json({message:'Db Error'});
     }
 
     //Creating JWT Tokens -> accessToken and refreshToken
@@ -114,11 +114,11 @@ exports.refresh = async (req,res) => {
     //Check if valid user
     const user = await findUser({_id:userData._id});
     if(!user){
-        return res.status(401).json({message:'No user'});
+        return res.status(404).json({message:'No user'});
     }
 
     //Generate new tokens
-    const {refreshToken,accessToken} = await generateToken({_id:userData._id, activated:false});
+    const {refreshToken,accessToken} = await generateToken({_id:userData._id});
 
     //Update Refresh Token
     try{
