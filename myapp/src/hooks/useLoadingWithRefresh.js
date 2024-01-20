@@ -10,7 +10,7 @@ export function useLoadingWithRefresh() {
     useEffect(() => {
         (async () => {
             try {
-                const { data } = await axios.get("http://localhost:5500/api/refresh",{withCredentials:true});
+                const { data } = await axios.get("https://couch-critic-deployment.vercel.app/api/refresh",{withCredentials:true});
                 dispatch(setAuth(data));
                 setLoading(false);
             } catch (err) {
