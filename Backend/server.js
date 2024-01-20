@@ -30,7 +30,7 @@ app.use(cookieParser());
 const cors = require('cors');
 var corsOptions = {
     credentials: true, //to allow cookies transfer
-    origin: ['http://localhost:3000'],
+    origin: ['https://couchcritic.vercel.app'],
 }
 app.use(cors(corsOptions));
 
