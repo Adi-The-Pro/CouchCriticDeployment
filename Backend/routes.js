@@ -9,7 +9,7 @@ router.post('/api/otp-send', sendOtp);
 router.post('/api/verify-otp',verifyOtp);
 router.post('/api/activate',authMiddleware,activate);
 router.get('/api/refresh',refresh);
-router.post('/api/logout',authMiddleware,logout);
+router.post('/api/logout',logout);
 router.post('/api/rooms',authMiddleware,create);
 router.get('/api/rooms',index);
 router.get('/api/rooms/:roomId',show);
