@@ -135,15 +135,22 @@ exports.refresh = async (req,res) => {
     }
 
     //Put In Cookie
-    res.cookie('refreshToken', refreshToken,{
+    const isProduction = process.env.NODE_ENV === 'production';
+
+    res.cookie('refreshToken', refreshToken,{ //valid for one min 
         maxAge: 1000*60*60*24*30,
         httpOnly:true,
+        secure: isProduction, // Set to true if served over HTTPS in production
+        sameSite: 'None', // Adjust based on your requirements
     });
 
     res.cookie('accessToken', accessToken,{
         maxAge: 1000*60*60*24*30,
         httpOnly:true,
+        secure: isProduction, // Set to true if served over HTTPS in production
+        sameSite: 'None', // Adjust based on your requirements
     });
+    
     const userDto = new UserDto(user);
     res.json({user:userDto,auth:true});
 }
