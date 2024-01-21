@@ -2,6 +2,7 @@ const { verifyAcccessToken } = require("../Services/token-services");
 module.exports = async (req,res,next) => {
     try{
         const {accessToken} = req.cookies;
+        console.log(accessToken,'auth-middleware');
         if(!accessToken){
             throw new Error();
         }
