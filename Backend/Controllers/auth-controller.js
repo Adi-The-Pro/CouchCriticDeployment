@@ -73,14 +73,20 @@ exports.verifyOtp = async (req, res) => {
     await storeRefreshToken(refreshToken,user._id);
     
 
+    const isProduction = process.env.NODE_ENV === 'production';
+
     res.cookie('refreshToken', refreshToken,{ //valid for one min 
         maxAge: 1000*60*60*24*30,
         httpOnly:true,
+        secure: isProduction, // Set to true if served over HTTPS in production
+        sameSite: 'None', // Adjust based on your requirements
     });
 
     res.cookie('accessToken', accessToken,{
         maxAge: 1000*60*60*24*30,
         httpOnly:true,
+        secure: isProduction, // Set to true if served over HTTPS in production
+        sameSite: 'None', // Adjust based on your requirements
     });
 
     console.log(accessToken+'--->'+refreshToken);
