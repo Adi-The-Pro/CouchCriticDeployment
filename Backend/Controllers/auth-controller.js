@@ -82,7 +82,9 @@ exports.verifyOtp = async (req, res) => {
         maxAge: 1000*60*60*24*30,
         httpOnly:true,
     });
-    console.log(accessToken+''+refreshToken);
+
+    console.log(accessToken+'--->'+refreshToken);
+
     const userDto =new UserDto(user);
     res.json({user:userDto,auth:true});
 };
