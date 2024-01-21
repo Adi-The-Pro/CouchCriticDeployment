@@ -14,7 +14,7 @@ app.get('/',(req,res) => {
 });
 
 //Creating a HTTP server ans pass it to Socket.io to handle real time communication 
-const server = require('https').createServer(app);
+const server = require('http').createServer(app);
 const io = require('socket.io')(server,{
     cors:{
         origin:['https://couchcritic.vercel.app' , 'http://couchcritic.vercel.app'],
