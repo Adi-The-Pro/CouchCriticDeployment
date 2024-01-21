@@ -17,7 +17,7 @@ app.get('/',(req,res) => {
 const server = require('http').createServer(app);
 const io = require('socket.io')(server,{
     cors:{
-        origin:'https://couchcritic.vercel.app',
+        origin:['https://couchcritic.vercel.app' , 'http://couchcritic.vercel.app'],
         methods : ['GET','POST'],
     },
 });
