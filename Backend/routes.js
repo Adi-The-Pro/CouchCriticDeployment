@@ -12,5 +12,5 @@ router.get('/api/refresh',refresh);
 router.post('/api/logout',authMiddleware,logout);
 router.post('/api/rooms',authMiddleware,create);
 router.get('/api/rooms',index);
-router.get('/api/rooms/:roomId',authMiddleware,show);
+router.get('/api/rooms/:roomId',show);
 module.exports = router;
