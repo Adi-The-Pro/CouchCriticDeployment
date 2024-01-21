@@ -89,7 +89,6 @@ exports.verifyOtp = async (req, res) => {
         sameSite: 'None', // Adjust based on your requirements
     });
 
-    console.log(accessToken+'--->'+refreshToken);
 
     const userDto =new UserDto(user);
     res.json({user:userDto,auth:true});
