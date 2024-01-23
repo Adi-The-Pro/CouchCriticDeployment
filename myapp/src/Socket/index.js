@@ -12,4 +12,3 @@ export const socketInit = () => {
 //URL of SOCKET.IO server to which the client will connect
     return io('https://couch-critic-deployment.vercel.app', options);
 }
-
