@@ -15,6 +15,13 @@ Invite Others: Private rooms come with the ability to invite other users, ensuri
 
 
 
+![Home Page](https://github.com/Adi-The-Pro/CouchCriticDeployment/assets/98386784/7ea49b45-3883-4076-9771-41458a00cd9a)
+
+![Verification Page](https://github.com/Adi-The-Pro/CouchCriticDeployment/assets/98386784/e909dffb-35c4-4046-9df3-9f17c86a2816)
+
+![Add New Room](https://github.com/Adi-The-Pro/CouchCriticDeployment/assets/98386784/2fb9d5cd-c539-48bc-8bc9-29666b11197b)
+
+![Chatting Page](https://github.com/Adi-The-Pro/CouchCriticDeployment/assets/98386784/6e8992d9-5eb0-4727-b55d-a473d746478c)
 ## How To Use
 - Sign Up / Log In: Create an account or log in to your existing account.
 - Browse Rooms: Explore the list of available public rooms and join any conversation that interests you.
