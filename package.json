@@ -1,0 +1,17 @@
+{
+  "name": "couchcriticdeployment",
+  "version": "1.0.0",
+  "description": "Welcome to Couch Critic! Couch Critic is an innovative platform designed to bring people together for real-time voice conversations. Whether you want to join a public discussion or host a private chat, Couch Critic provides a seamless experience for users to connect and communicate.",
+  "main": "index.js",
+  "scripts": {
+    "frontend": "cd myapp && npm start",
+    "backend": "cd Backend && npm start",
+    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
